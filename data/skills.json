@@ -25,7 +25,7 @@
         "text": "Identification des anomalies et correction d’un site existant, optimisation SEO et performance et publication d’un site en ligne"
     },
     {
-        "image": "test.png",
+        "image": "cypress.png",
         "title": "Cypress",
         "text": "Automatisation des tests end-to-end, écriture de scénarios de test et détection des régressions"
     },
@@ -35,13 +35,28 @@
     "text": "Suivi des anomalies, gestion des tickets et organisation du travail en méthodologie Agile"
     },
     {
-    "image": "postman.jpg",
+    "image": "postman.png",
     "title": "Postman",
     "text": "Tests d'API, vérification des requêtes et validation des réponses backend"
     },
     {
-    "image": "e2e.jpg",
-    "title": "Test E2E",
+    "image": "github.png",
+    "title": "Github",
     "text": "Conception de scénarios de test couvrant les parcours utilisateurs complets, de bout en bout"
-    } 
+    },
+    {
+    "image": "vscode.png",
+    "title": "VS Code",
+    "text": "Développement et débogage de code, utilisation d'extensions pour améliorer la productivité"
+    },
+    {
+    "image": "docker.png",
+    "title": "Docker",
+    "text": "Conteneurisation d'applications, création et gestion d'environnements de test isolés"
+    },
+    {
+    "image": "swagger.png",
+    "title": "Swagger",
+    "text": "Documentation et test d'API, exploration des endpoints et validation des schémas de requêtes/réponses"
+    }
 ]

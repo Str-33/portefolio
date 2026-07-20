@@ -19,15 +19,16 @@
 
 /* display background dark color on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: #5b5b5b;
+    background-color: rgba(91, 107, 96, 0.75);
 }
 
 /* hero background image */
 .bgimage {
     height: 100vh;
     max-height: 900px;
-    background: url("images/bannierre.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/bannierre.png");
     background-size: cover;
+    background-position: center;
     position: relative;
 }
 /* text css above hero image*/
@@ -44,20 +45,144 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* pastel cards wrapping the about / skills / portfolio sections */
+.content-card {
+    width: 94%;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid transparent;
+}
+/* higher specificity (id + class) so this wins over Bootstrap's .container rules (width/padding) */
+#about .content-card,
+#skills .content-card,
+#portfolio .content-card {
+    max-width: 1500px;
+    padding: 4rem 5rem;
+}
+.content-card--pink {
+    background: linear-gradient(135deg, #fdeef2 0%, #fbe0ea 100%);
+    border-color: #f4a6c6;
+}
+.content-card--green {
+    background: linear-gradient(135deg, #eaf7ee 0%, #dcf0e2 100%);
+    border-color: #9ed5ac;
+}
+
+/* section titles (about / skills / portfolio) share the same underlined style,
+   tinted to match each section's card theme */
+#about h2,
+#skills h2,
+#portfolio h2 {
+    position: relative;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+#about h2::after,
+#skills h2::after,
+#portfolio h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    border-radius: 2px;
 }
 
 /* about */
-.imageAboutPage {
-    width: 100%;
+#about h2 {
+    color: #c2417a;
+}
+#about h2::after {
+    background: linear-gradient(90deg, #f4a6c6, #e0699b);
+}
+#about p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    text-align: justify;
 }
 .imageAboutPage {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 8px rgba(244, 166, 198, 0.25), 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.imageAboutPage:hover {
+    transform: scale(1.03);
+}
+
+/* about tags (highlighted keywords) */
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.about-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    border: 1px solid #f4a6c6;
+    color: #c2417a;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(244, 166, 198, 0.25);
+}
+.about-tag i {
+    color: #e0699b;
+}
+
+/* about info list (name / age / address) */
+.about-infos {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.about-infos li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid #f4a6c6;
+    border-radius: 12px;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+    color: #6b3a4d;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.about-infos li:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(244, 166, 198, 0.35);
+}
+.about-infos li i {
+    color: #e0699b;
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
 }
 
 /* skills */
+#skills h2 {
+    color: #237a4b;
+}
+#skills h2::after {
+    background: linear-gradient(90deg, #9ed5ac, #3fa866);
+}
 .skillsText.card {
     height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
     cursor: pointer;
 }
 .skillsText img {
@@ -77,15 +202,49 @@
     text-align: center;
 }
 .card:hover .skillsIcon {
-    color: #008000;
+    color: #f4a6c6;
 }
 .skillsText:hover {
-    border: 1px solid #008000;
+    border: 1px solid #f4a6c6;
 }
 
 /* portfolio */
+#portfolio h2 {
+    color: #c2417a;
+}
+#portfolio h2::after {
+    background: linear-gradient(90deg, #f4a6c6, #e0699b);
+}
 #portfolio p {
     text-align: center;
+}
+.portfolioContent.card {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.portfolioContent .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+/* EcoBlissBath logo is mostly whitespace: cover crops/zooms it too much, so shrink it to fit instead */
+.portfolioContent img[src*="EcoBlissBath"] {
+    object-fit: contain;
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+}
+.portfolioContent .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.portfolioContent .card-text {
+    flex: 1;
+}
+.portfolioContent .btn {
+    margin-top: 1rem;
 }
 
 /* contact */
@@ -95,7 +254,7 @@
     align-items: center;
 }
 .contactColumn i {
-    color: #198754;
+    color: #f4a6c6;
 }
 
 /* footer */
