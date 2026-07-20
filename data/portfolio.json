@@ -6,14 +6,32 @@
         "link": "#"
     },
     {
-        "image": "image2.png",
-        "title": "Mon Vieux grimoire",
+        "image": "image5.png",
+        "title": "Sophie Bluel",
         "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         "link": "#"
     },
     {
         "image": "image3.png",
         "title": "Kasa",
+        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "link": "#"
+    },
+    {
+        "image": "image4.png",
+        "title": "Qwenta",
+        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "link": "#"
+    },
+    {
+        "image": "image6.png",
+        "title": "Eco Bliss Bath",
+        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "link": "#"
+    },
+    {
+        "image": "image6.png",
+        "title": "TOMSEN",
         "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         "link": "#"
     }

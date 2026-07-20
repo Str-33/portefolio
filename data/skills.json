@@ -26,7 +26,22 @@
     },
     {
         "image": "test.png",
-        "title": "Texte",
-        "title ": "Tests exploratoires, unitaires et d’intégration, définition d’une stratégie de test et d’un rédaction d’un cahier de recette, automatisation de tests E2E et d’API"
-    }
+        "title": "Cypress",
+        "text": "Automatisation des tests end-to-end, écriture de scénarios de test et détection des régressions"
+    },
+    {
+    "image": "jira.jpg",
+    "title": "Jira",
+    "text": "Suivi des anomalies, gestion des tickets et organisation du travail en méthodologie Agile"
+    },
+    {
+    "image": "postman.jpg",
+    "title": "Postman",
+    "text": "Tests d'API, vérification des requêtes et validation des réponses backend"
+    },
+    {
+    "image": "e2e.jpg",
+    "title": "Test E2E",
+    "text": "Conception de scénarios de test couvrant les parcours utilisateurs complets, de bout en bout"
+    } 
 ]
