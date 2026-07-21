@@ -17,9 +17,24 @@
     padding-bottom: 4rem;
 }
 
-/* display background dark color on navbar scroll */
+/* always give the navbar a background so white text keeps sufficient contrast,
+   even at the top of the page before the scroll effect kicks in */
+.navbarScroll {
+    background-color: rgba(45, 53, 48, 0.75);
+}
+/* darken further once scrolled past the hero image */
 .navbarScroll.navbarDark {
-    background-color: rgba(91, 107, 96, 0.75);
+    background-color: rgba(45, 53, 48, 0.92);
+}
+
+/* Bootstrap dims inactive nav links to 55% white by default, which is not
+   readable enough against the navbar background; raise the baseline opacity */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
 }
 
 /* hero background image */
@@ -104,7 +119,6 @@
     font-size: 1.05rem;
     line-height: 1.8;
     color: #4a4a4a;
-    text-align: justify;
 }
 .imageAboutPage {
     width: 100%;
