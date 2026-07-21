@@ -1,5 +1,6 @@
 /******* GENERAL *******/
-/* spacing on all sections */
+/* Espacement commun à toutes les sections du site, pour que la navbar fixe
+   (position: fixed) ne recouvre pas le début du contenu au moment de l'ancrage */
 #about,
 #skills,
 #portfolio,
@@ -7,6 +8,7 @@
     margin-top: 4rem;
     padding-top: 4rem;
 }
+/* Espace sous chaque titre de section avant le contenu */
 #about h2,
 #skills h2,
 #portfolio h2,
@@ -17,18 +19,20 @@
     padding-bottom: 4rem;
 }
 
-/* always give the navbar a background so white text keeps sufficient contrast,
-   even at the top of the page before the scroll effect kicks in */
+/* On donne toujours un fond à la navbar pour que le texte blanc garde un contraste
+   suffisant, même en haut de page avant que l'effet de défilement ne s'active */
 .navbarScroll {
     background-color: rgba(45, 53, 48, 0.75);
 }
-/* darken further once scrolled past the hero image */
+/* Fond encore plus sombre une fois le défilement passé l'image d'en-tête
+   (classe ajoutée dynamiquement par handleNavbarScroll dans script.js) */
 .navbarScroll.navbarDark {
     background-color: rgba(45, 53, 48, 0.92);
 }
 
-/* Bootstrap dims inactive nav links to 55% white by default, which is not
-   readable enough against the navbar background; raise the baseline opacity */
+/* Par défaut, Bootstrap affiche les liens de navigation inactifs en blanc à 55%
+   d'opacité, ce qui n'est pas assez lisible sur le fond de la navbar ;
+   on augmente donc l'opacité de base */
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.9);
 }
@@ -37,7 +41,8 @@
     color: #fff;
 }
 
-/* hero background image */
+/* Image de fond de la bannière d'accueil (hero), avec un voile sombre pour
+   assurer la lisibilité du texte blanc superposé */
 .bgimage {
     height: 100vh;
     max-height: 900px;
@@ -46,7 +51,7 @@
     background-position: center;
     position: relative;
 }
-/* text css above hero image*/
+/* Styles du texte affiché par-dessus l'image d'en-tête (titre + sous-titre) */
 .hero_title {
     font-size: 4.5rem;
 }
@@ -63,14 +68,15 @@
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* pastel cards wrapping the about / skills / portfolio sections */
+/* Cartes pastel qui encadrent les sections "A propos", "Compétences" et "Portfolio" */
 .content-card {
     width: 94%;
     border-radius: 20px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     border: 1px solid transparent;
 }
-/* higher specificity (id + class) so this wins over Bootstrap's .container rules (width/padding) */
+/* Sélecteur combinant id + classe pour augmenter la spécificité et l'emporter
+   sur les règles Bootstrap de .container (width/padding) */
 #about .content-card,
 #skills .content-card,
 #portfolio .content-card {
@@ -86,8 +92,8 @@
     border-color: #9ed5ac;
 }
 
-/* section titles (about / skills / portfolio) share the same underlined style,
-   tinted to match each section's card theme */
+/* Les titres de section (A propos / Compétences / Portfolio) partagent le même
+   style souligné, chacun teinté selon la couleur de sa carte */
 #about h2,
 #skills h2,
 #portfolio h2 {
@@ -108,7 +114,7 @@
     border-radius: 2px;
 }
 
-/* about */
+/* Section "A propos" */
 #about h2 {
     color: #c2417a;
 }
@@ -132,7 +138,7 @@
     transform: scale(1.03);
 }
 
-/* about tags (highlighted keywords) */
+/* Tags "A propos" : mots-clés mis en avant (ex. Détection d'anomalies, Automatisation des tests) */
 .about-tags {
     display: flex;
     flex-wrap: wrap;
@@ -155,7 +161,7 @@
     color: #e0699b;
 }
 
-/* about info list (name / age / address) */
+/* Liste d'infos personnelles dans "A propos" (nom / âge / adresse) */
 .about-infos {
     list-style: none;
     padding-left: 0;
@@ -186,7 +192,7 @@
     text-align: center;
 }
 
-/* skills */
+/* Section "Compétences" */
 #skills h2 {
     color: #237a4b;
 }
@@ -222,7 +228,7 @@
     border: 1px solid #f4a6c6;
 }
 
-/* portfolio */
+/* Section "Portfolio" */
 #portfolio h2 {
     color: #c2417a;
 }
@@ -243,7 +249,8 @@
     height: 180px;
     object-fit: cover;
 }
-/* EcoBlissBath logo is mostly whitespace: cover crops/zooms it too much, so shrink it to fit instead */
+/* Le logo EcoBlissBath contient beaucoup de blanc : un cadrage "cover" le
+   zoomerait/rognerait excessivement, on préfère donc l'ajuster en "contain" */
 .portfolioContent img[src*="EcoBlissBath"] {
     object-fit: contain;
     padding: 2.5rem 1.5rem;
@@ -261,7 +268,8 @@
     margin-top: 1rem;
 }
 
-/* contact */
+/* Section "Contact" : chaque colonne (téléphone, email, LinkedIn) est centrée
+   verticalement autour de son icône */
 .contactColumn {
     display: flex;
     flex-direction: column;
@@ -271,4 +279,59 @@
     color: #f4a6c6;
 }
 
-/* footer */
+/* Pied de page (actuellement vide, réservé pour un futur contenu) */
+
+/******* RESPONSIVE *******/
+/* Sous le breakpoint lg, les cartes n'ont plus besoin d'autant de marge intérieure
+   car le contenu passe sur toute la largeur de l'écran */
+@media (max-width: 991.98px) {
+    #about .content-card,
+    #skills .content-card,
+    #portfolio .content-card {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Le titre et le sous-titre de la bannière sont dimensionnés pour un grand
+       écran ; on les réduit pour qu'ils tiennent sur mobile sans déborder */
+    .hero_title {
+        font-size: 2.75rem;
+    }
+    .hero_desc {
+        font-size: 1.25rem;
+    }
+    #about .content-card,
+    #skills .content-card,
+    #portfolio .content-card {
+        padding: 2.5rem 1.25rem;
+    }
+    /* La photo prend toute la largeur de sa colonne empilée ; on la limite
+       pour qu'elle ne devienne pas disproportionnée sur mobile */
+    .imageAboutPage {
+        max-width: 220px;
+        margin: 0 auto 2rem;
+        display: block;
+    }
+    /* Les hauteurs fixes des cartes servaient à aligner 3 colonnes ; en une
+       seule colonne, on laisse le contenu déterminer la hauteur */
+    .skillsText.card {
+        height: auto;
+        min-height: 300px;
+    }
+    .portfolioContent.card {
+        height: auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero_title {
+        font-size: 2.1rem;
+    }
+    .hero_desc {
+        font-size: 1rem;
+    }
+    .content-card {
+        width: 100%;
+    }
+}

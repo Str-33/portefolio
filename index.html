@@ -6,20 +6,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portfolio d'Esther Beaudouin, développeuse web junior spécialisée dans les tests QA : compétences, projets et contact.">
-    <!-- linking css file -->
+    <!-- Feuille de styles propre au site (mise en page, couleurs, sections) -->
     <link rel="stylesheet" href="style.css">
-    <!-- bootstrap CDN -->
+    <!-- CDN Bootstrap : fournit la grille responsive, la navbar et les composants (cartes, boutons...) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" async>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Préconnexion au CDN Font Awesome pour accélérer le chargement des icônes ci-dessous -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <!-- Font Awesome CDN (icônes utilisées dans la section contact) -->
+    <!-- CDN Font Awesome : icônes utilisées dans la navbar, la section "A propos" et la section contact -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
-    <!-- navbar -->
+    <!-- Barre de navigation fixe en haut de page, avec menu repliable sur mobile (voir handleNavbarCollapse dans script.js) -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
         <div class="container">
             <a class="navbar-brand" href="#">Beaudouin Esther</a>
@@ -51,11 +52,11 @@
         </div>
     </nav>
 
-    <!-- main banner -->
+    <!-- Bannière d'accueil : image de fond plein écran avec titre et sous-titre centrés -->
     <section class="bgimage" id="home">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                <div class="col-12 hero-text">
                     <h1 class="hero_title">Esther Beaudouin</h1>
                     <p class="hero_desc">Développeur web junior, spécialisé dans les tests QA</p>
                 </div>
@@ -63,16 +64,16 @@
         </div>
     </section>
 
-    <!-- about section-->
+    <!-- Section "A propos" : présentation, photo, tags de compétences clés et infos personnelles -->
     <section id="about">
         <div class="container mt-4 pt-4 content-card content-card--pink">
             <h2 class="text-center">A propos</h2>
             <div class="row mt-4">
-                <div class="col-lg-4">
+                <div class="col-12 col-md-4">
                     <img src="images/person.png" class="imageAboutPage" alt="">
                 </div>
 
-                <div class="col-lg-8">
+                <div class="col-12 col-md-8">
                     <p> Passionnée par la qualité logicielle, je me forme actuellement au métier de Testeur QA en alternance au sein d'une entreprise SaaS du secteur food.
                         Rigoureuse et méthodique, j'accorde une attention particulière à la détection des anomalies et à l'amélioration continue
                         des processus de test. Curieuse de nature,
@@ -86,7 +87,7 @@
                         <span class="about-tag"><i class="fa-solid fa-arrows-rotate"></i> Amélioration continue</span>
                     </div>
                     <div class="row mt-4">
-                        <div class="col-md-6">
+                        <div class="col-12 col-md-6">
                             <ul class="about-infos">
                                 <li><i class="fa-solid fa-user"></i> Nom: Esther Beaudouin</li>
                                 <li><i class="fa-solid fa-cake-candles"></i> Age: 28</li>
@@ -100,36 +101,38 @@
         </div>
     </section>
 
-    <!-- skills section-->
+    <!-- Section "Compétences" : le contenu (cartes) est injecté dynamiquement par createSkillsFromJSON()
+         à partir de data/skills.json, voir script/script.js -->
     <section id="skills">
         <div class="container content-card content-card--green">
             <h2 class="text-center">Mes compétences</h2>
         </div>
     </section>
 
-    <!-- portfolio section-->
+    <!-- Section "Portfolio" : le contenu (cartes projets) est injecté dynamiquement par createPortfolioFromJSON()
+         à partir de data/portfolio.json, voir script/script.js -->
     <section id="portfolio">
         <div class="container mt-3 content-card content-card--pink">
             <h2 class="text-center">Mes projets</h2>
         </div>
     </section>
 
-    <!-- contact section-->
+    <!-- Section "Contact" : coordonnées affichées en trois colonnes (téléphone, email, LinkedIn) -->
     <section id="contact">
         <div class="container mt-3 contactContent">
             <h2 class="text-center">Contactez-moi</h2>
             <div class="row">
-                <div class="col-lg-4 mt-4 contactColumn">
+                <div class="col-12 col-md-4 mt-4 contactColumn">
                     <i class="fa-solid fa-phone fa-4x"></i>
                     <h3>Téléphone</h3>
                     <p>06-23-06-34-56</p>
                 </div>
-                <div class="col-lg-4 mt-4 contactColumn">
+                <div class="col-12 col-md-4 mt-4 contactColumn">
                     <i class="fa-regular fa-envelope fa-4x"></i>
                     <h3>Adresse email</h3>
                     <p>beaudouinesther@gmail.com</p>
                 </div>
-                <div class="col-lg-4 mt-4 contactColumn">
+                <div class="col-12 col-md-4 mt-4 contactColumn">
                     <i class="fa-brands fa-linkedin-in fa-4x"></i>
                     <h3>LinkedIn</h3>
                     <p>Esther Beaudouin</p>
@@ -138,7 +141,7 @@
         </div>
     </section>
 
-    <!-- load javascript after loading all html content -->
+    <!-- Script chargé en fin de <body> pour que le DOM soit déjà construit avant son exécution -->
     <script src="script/script.js"></script>
 
 </body>
