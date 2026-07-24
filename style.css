@@ -46,7 +46,7 @@
 .bgimage {
     height: 100vh;
     max-height: 900px;
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/bannierre.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("images/bannierre.webp");
     background-size: cover;
     background-position: center;
     position: relative;

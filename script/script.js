@@ -43,15 +43,28 @@ function createSkillsFromJSON() {
             data.forEach((item, index) => {
                 const card = document.createElement("div");
                 card.classList.add("col-12", "col-sm-6", "col-lg-4", "mt-4");
-                card.innerHTML = `
-                    <div class="card skillsText">
-                        <div class="card-body">
-                            <img src="./images/${item.image}" alt="${item.title}" />
-                            <h3 class="card-title mt-3">${item.title}</h3>
-                            <p class="card-text mt-3">${item.text}</p>
-                        </div>
-                    </div>
-                `;
+
+                const cardInner = document.createElement("div");
+                cardInner.classList.add("card", "skillsText");
+
+                const cardBody = document.createElement("div");
+                cardBody.classList.add("card-body");
+
+                const img = document.createElement("img");
+                img.src = `./images/${item.image}`;
+                img.alt = item.title;
+
+                const title = document.createElement("h3");
+                title.classList.add("card-title", "mt-3");
+                title.textContent = item.title;
+
+                const text = document.createElement("p");
+                text.classList.add("card-text", "mt-3");
+                text.textContent = item.text;
+
+                cardBody.append(img, title, text);
+                cardInner.appendChild(cardBody);
+                card.appendChild(cardInner);
 
                 // Ajoute la carte à la ligne (row) en cours de construction
                 row.appendChild(card);
@@ -82,18 +95,39 @@ function createPortfolioFromJSON() {
             data.forEach((item, index) => {
                 const card = document.createElement("div");
                 card.classList.add("col-12", "col-sm-6", "col-lg-4", "mt-4");
-                card.innerHTML = `
-                    <div class="card portfolioContent">
-                    <img class="card-img-top" src="images/${item.image}" style="width:100%" alt="Aperçu du projet ${item.title}">
-                    <div class="card-body">
-                        <h3 class="card-title">${item.title}</h3>
-                        <p class="card-text">${item.text}</p>
-                        <div class="text-center">
-                            <a href="${item.link}" class="btn btn-success">Voir le projet ${item.title}</a>
-                        </div>
-                    </div>
-                </div>
-                `;
+
+                const cardInner = document.createElement("div");
+                cardInner.classList.add("card", "portfolioContent");
+
+                const img = document.createElement("img");
+                img.classList.add("card-img-top");
+                img.src = `images/${item.image}`;
+                img.style.width = "100%";
+                img.alt = `Aperçu du projet ${item.title}`;
+
+                const cardBody = document.createElement("div");
+                cardBody.classList.add("card-body");
+
+                const title = document.createElement("h3");
+                title.classList.add("card-title");
+                title.textContent = item.title;
+
+                const text = document.createElement("p");
+                text.classList.add("card-text");
+                text.textContent = item.text;
+
+                const textCenter = document.createElement("div");
+                textCenter.classList.add("text-center");
+
+                const link = document.createElement("a");
+                link.href = item.link;
+                link.classList.add("btn", "btn-success");
+                link.textContent = `Voir le projet ${item.title}`;
+
+                textCenter.appendChild(link);
+                cardBody.append(title, text, textCenter);
+                cardInner.append(img, cardBody);
+                card.appendChild(cardInner);
 
                 // Ajoute la carte à la ligne (row) en cours de construction
                 row.appendChild(card);
