@@ -20,126 +20,136 @@
 </head>
 
 <body>
-    <!-- Barre de navigation fixe en haut de page, avec menu repliable sur mobile (voir handleNavbarCollapse dans script.js) -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
-        <div class="container">
-            <a class="navbar-brand" href="#">Beaudouin Esther</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">A propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Compétences</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contactez-moi</a>
-                    </li>
-                </ul>
+    <header>
+        <!-- Barre de navigation fixe en haut de page, avec menu repliable sur mobile (voir handleNavbarCollapse dans script.js) -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
+            <div class="container">
+                <a class="navbar-brand" href="#">Beaudouin Esther</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">A propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Compétences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contactez-moi</a>
+                        </li>
+                    </ul>
 
-            </div>
-        </div>
-    </nav>
-
-    <!-- Bannière d'accueil : image de fond plein écran avec titre et sous-titre centrés -->
-    <section class="bgimage" id="home">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 hero-text">
-                    <h1 class="hero_title">Esther Beaudouin</h1>
-                    <p class="hero_desc">Développeur web junior, spécialisé dans les tests QA</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- Section "A propos" : présentation, photo, tags de compétences clés et infos personnelles -->
-    <section id="about">
-        <div class="container mt-4 pt-4 content-card content-card--pink">
-            <h2 class="text-center">A propos</h2>
-            <div class="row mt-4">
-                <div class="col-12 col-md-4">
-                    <img src="images/person.webp" class="imageAboutPage" alt="">
-                </div>
-
-                <div class="col-12 col-md-8">
-                    <p> Passionnée par la qualité logicielle, je me forme actuellement au métier de Testeur QA en alternance au sein d'une entreprise SaaS du secteur food.
-                        Rigoureuse et méthodique, j'accorde une attention particulière à la détection des anomalies et à l'amélioration continue
-                        des processus de test. Curieuse de nature,
-                        je m'investis dans l'automatisation des tests pour allier efficacité et fiabilité.
-                        Je recherche aujourd'hui à approfondir mon expertise technique tout en contribuant activement à la performance des équipes produit.
-
-                    </p>
-                    <div class="about-tags mt-3">
-                        <span class="about-tag"><i class="fa-solid fa-magnifying-glass"></i> Détection d'anomalies</span>
-                        <span class="about-tag"><i class="fa-solid fa-robot"></i> Automatisation des tests</span>
-                        <span class="about-tag"><i class="fa-solid fa-arrows-rotate"></i> Amélioration continue</span>
+    <main>
+        <!-- Bannière d'accueil : image de fond plein écran avec titre et sous-titre centrés -->
+        <section class="bgimage" id="home">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 hero-text">
+                        <h1 class="hero_title">Esther Beaudouin</h1>
+                        <p class="hero_desc">Développeur web junior, spécialisé dans les tests QA</p>
                     </div>
-                    <div class="row mt-4">
-                        <div class="col-12 col-md-6">
-                            <ul class="about-infos">
-                                <li><i class="fa-solid fa-user"></i> Nom: Esther Beaudouin</li>
-                                <li><i class="fa-solid fa-cake-candles"></i> Age: 28</li>
-                                <li><i class="fa-solid fa-location-dot"></i> Adresse: 33800 Bordeaux</li>
+                </div>
+            </div>
+        </section>
 
-                            </ul>
+        <!-- Section "A propos" : présentation, photo, tags de compétences clés et infos personnelles -->
+        <section id="about">
+            <div class="container mt-4 pt-4 content-card content-card--pink">
+                <h2 class="text-center">A propos</h2>
+                <div class="row mt-4">
+                    <div class="col-12 col-md-4">
+                        <img src="images/person.webp" class="imageAboutPage" alt="Portrait d'Esther Beaudouin">
+                    </div>
+
+                    <div class="col-12 col-md-8">
+                        <p> Passionnée par la qualité logicielle, je me forme actuellement au métier de Testeur QA en alternance au sein d'une entreprise SaaS du secteur food.
+                            Rigoureuse et méthodique, j'accorde une attention particulière à la détection des anomalies et à l'amélioration continue
+                            des processus de test. Curieuse de nature,
+                            je m'investis dans l'automatisation des tests pour allier efficacité et fiabilité.
+                            Je recherche aujourd'hui à approfondir mon expertise technique tout en contribuant activement à la performance des équipes produit.
+
+                        </p>
+                        <div class="about-tags mt-3">
+                            <span class="about-tag"><i class="fa-solid fa-magnifying-glass"></i> Détection d'anomalies</span>
+                            <span class="about-tag"><i class="fa-solid fa-robot"></i> Automatisation des tests</span>
+                            <span class="about-tag"><i class="fa-solid fa-arrows-rotate"></i> Amélioration continue</span>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12 col-md-6">
+                                <ul class="about-infos">
+                                    <li><i class="fa-solid fa-user"></i> Nom: Esther Beaudouin</li>
+                                    <li><i class="fa-solid fa-cake-candles"></i> Age: 28</li>
+                                    <li><i class="fa-solid fa-location-dot"></i> Adresse: 33800 Bordeaux</li>
+
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section "Compétences" : le contenu (cartes) est injecté dynamiquement par createSkillsFromJSON()
-         à partir de data/skills.json, voir script/script.js -->
-    <section id="skills">
-        <div class="container content-card content-card--green">
-            <h2 class="text-center">Mes compétences</h2>
-        </div>
-    </section>
+        <!-- Section "Compétences" : le contenu (cartes) est injecté dynamiquement par createSkillsFromJSON()
+             à partir de data/skills.json, voir script/script.js -->
+        <section id="skills">
+            <div class="container content-card content-card--green">
+                <h2 class="text-center">Mes compétences</h2>
+            </div>
+        </section>
 
-    <!-- Section "Portfolio" : le contenu (cartes projets) est injecté dynamiquement par createPortfolioFromJSON()
-         à partir de data/portfolio.json, voir script/script.js -->
-    <section id="portfolio">
-        <div class="container mt-3 content-card content-card--pink">
-            <h2 class="text-center">Mes projets</h2>
-        </div>
-    </section>
+        <!-- Section "Portfolio" : le contenu (cartes projets) est injecté dynamiquement par createPortfolioFromJSON()
+             à partir de data/portfolio.json, voir script/script.js -->
+        <section id="portfolio">
+            <div class="container mt-3 content-card content-card--pink">
+                <h2 class="text-center">Mes projets</h2>
+            </div>
+        </section>
 
-    <!-- Section "Contact" : coordonnées affichées en trois colonnes (téléphone, email, LinkedIn) -->
-    <section id="contact">
-        <div class="container mt-3 contactContent">
-            <h2 class="text-center">Contactez-moi</h2>
-            <div class="row">
-                <div class="col-12 col-md-4 mt-4 contactColumn">
-                    <i class="fa-solid fa-phone fa-4x"></i>
-                    <h3>Téléphone</h3>
-                    <p>06-23-06-34-56</p>
-                </div>
-                <div class="col-12 col-md-4 mt-4 contactColumn">
-                    <i class="fa-regular fa-envelope fa-4x"></i>
-                    <h3>Adresse email</h3>
-                    <p>beaudouinesther@gmail.com</p>
-                </div>
-                <div class="col-12 col-md-4 mt-4 contactColumn">
-                    <i class="fa-brands fa-linkedin-in fa-4x"></i>
-                    <h3>LinkedIn</h3>
-                    <p>Esther Beaudouin</p>
+        <!-- Section "Contact" : coordonnées affichées en trois colonnes (téléphone, email, LinkedIn) -->
+        <section id="contact">
+            <div class="container mt-3 contactContent">
+                <h2 class="text-center">Contactez-moi</h2>
+                <div class="row">
+                    <div class="col-12 col-md-4 mt-4 contactColumn">
+                        <i class="fa-solid fa-phone fa-4x"></i>
+                        <h3>Téléphone</h3>
+                        <p>06-23-06-34-56</p>
+                    </div>
+                    <div class="col-12 col-md-4 mt-4 contactColumn">
+                        <i class="fa-regular fa-envelope fa-4x"></i>
+                        <h3>Adresse email</h3>
+                        <p>beaudouinesther@gmail.com</p>
+                    </div>
+                    <div class="col-12 col-md-4 mt-4 contactColumn">
+                        <i class="fa-brands fa-linkedin-in fa-4x"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Esther Beaudouin</p>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Esther Beaudouin. Tous droits réservés.</p>
         </div>
-    </section>
+    </footer>
 
     <!-- Script chargé en fin de <body> pour que le DOM soit déjà construit avant son exécution -->
     <script src="script/script.js"></script>

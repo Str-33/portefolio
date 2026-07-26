@@ -279,7 +279,16 @@
     color: #f4a6c6;
 }
 
-/* Pied de page (actuellement vide, réservé pour un futur contenu) */
+/* Pied de page : même teinte sombre que la navbar une fois défilée, pour une cohérence visuelle */
+.site-footer {
+    background-color: rgba(45, 53, 48, 0.92);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 1.5rem 0;
+}
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
 
 /******* RESPONSIVE *******/
 /* Sous le breakpoint lg, les cartes n'ont plus besoin d'autant de marge intérieure

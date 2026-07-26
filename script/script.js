@@ -52,7 +52,7 @@ function createSkillsFromJSON() {
 
                 const img = document.createElement("img");
                 img.src = `./images/${item.image}`;
-                img.alt = item.title;
+                img.alt = item.alt;
 
                 const title = document.createElement("h3");
                 title.classList.add("card-title", "mt-3");
@@ -103,7 +103,7 @@ function createPortfolioFromJSON() {
                 img.classList.add("card-img-top");
                 img.src = `images/${item.image}`;
                 img.style.width = "100%";
-                img.alt = `Aperçu du projet ${item.title}`;
+                img.alt = item.alt;
 
                 const cardBody = document.createElement("div");
                 cardBody.classList.add("card-body");
